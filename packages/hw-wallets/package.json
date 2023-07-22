@@ -1,0 +1,63 @@
+{
+  "name": "@enkryptcom/hw-wallets",
+  "version": "0.0.3",
+  "description": "Hardware wallet manager for enkrypt",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "lint": "prettier --write .",
+    "test": "ts-mocha -p tsconfig.json tests/**/*.test.ts"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-module-resolver": "^1.5.0",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5",
+    "typescript-eslint": "0.0.1-alpha.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkryptcom/enKrypt/tree/main/packages/hw-wallets"
+  },
+  "keywords": [],
+  "author": "kvhnuke",
+  "license": "MIT",
+  "dependencies": {
+    "@enkryptcom/types": "workspace:^",
+    "@enkryptcom/utils": "workspace:^",
+    "@ethereumjs/tx": "^4.2.0",
+    "@ledgerhq/hw-app-eth": "^6.33.7",
+    "@ledgerhq/hw-transport": "^6.28.5",
+    "@ledgerhq/hw-transport-webusb": "^6.27.16",
+    "@ledgerhq/live-common": "^24.1.0",
+    "@polkadot/types": "^10.9.1",
+    "@polkadot/util": "^12.3.2",
+    "@trezor/connect-web": "^9.0.11",
+    "@zondax/ledger-substrate": "^0.40.7",
+    "ethereumjs-util": "^7.1.5",
+    "hdkey": "^2.1.0",
+    "webextension-polyfill": "^0.10.0"
+  }
+}
